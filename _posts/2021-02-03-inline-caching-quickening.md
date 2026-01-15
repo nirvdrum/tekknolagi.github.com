@@ -79,7 +79,7 @@ compiler would decide to inline the direct call.
 
 [calls]: https://stackoverflow.com/questions/7241922/how-has-cpu-architecture-evolution-affected-virtual-function-call-performance
 
-Quickening is a technique that reduces the number of checks by explitly marking
+Quickening is a technique that reduces the number of checks by explicitly marking
 state transitions in the bytecode.
 
 ## Removing the empty check
