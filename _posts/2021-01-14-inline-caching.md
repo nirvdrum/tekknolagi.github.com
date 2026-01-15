@@ -533,7 +533,7 @@ improvements.[^amdahl-kind-of]
 **What other performance considerations might you have?**
 Consider your memory constraints. Perhaps you are on a system where memory is a
 concern. Adding inline caches will require additional memory. This might cause
-swapping, if its enabled.
+swapping, if it's enabled.
 
 **So without benchmarks, how do you know this is even faster?**
 Don't take my word for it. Benchmark your runtime. Take a look at the
