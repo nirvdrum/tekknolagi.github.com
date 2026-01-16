@@ -58,7 +58,7 @@ different:
 If you go for monomorphic and that code never sees any other hidden class,
 you've won big: the generated code is small and generally you can use these
 very strong type assumptions from having burned it into the code from the
-beginning. If you're wrong, though, and the that ends up being a polymorphic
+beginning. If you're wrong, though, and that ends up being a polymorphic
 site in the code, you lose on performance: it will be constantly jumping into
 the interpreter.
 
@@ -77,7 +77,7 @@ primary case is fast.
 Let's think about the information our caches give us right now:
 
 * how many hidden classes seen (1, 2 to K, or &gt;K)
-* which hidden classes seen (as long as &lt;= K)
+* which hidden classes have been seen (as long as &lt;= K)
 * if polymorphic, in what order the hidden classes were seen
 
 But we want more information than that: we want to know if the access patterns
@@ -169,7 +169,7 @@ There's some ad-hoc checking for this kind of thing in `optimize_calls.cc`, for
 example to specialize `a[b]` where `a` is historically either a `list` or a
 `tuple`.
 
-Also, sadly, they did not get to implemented SkewedMegamorphic before the
+Also, sadly, they did not implement SkewedMegamorphic before the
 project shut down, so they only handle monomorphic and polymorphic cases all
 across the optimizer. Ah well.
 
